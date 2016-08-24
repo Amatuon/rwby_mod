@@ -27,8 +27,6 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             item.useSound = 1;
             item.autoReuse = true;
             item.useTurn = true;
-            item.shoot = mod.ProjectileType("EmberCelicaBlast");
-            item.shootSpeed = 1f;
         }
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
@@ -56,7 +54,7 @@ namespace rwby_mod.Items.Weapons.EmberCelica
 
         public override bool CanUseItem(Player player)
         {
-            if (player.altFunctionUse == 2)      //Binds to Right Click
+            if (player.altFunctionUse == 2)
             {
                 item.stack -= 1;
 

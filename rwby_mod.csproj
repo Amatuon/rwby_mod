@@ -58,7 +58,10 @@
     <Compile Include="Items\Dusts\DustGravity.cs" />
     <Compile Include="Items\Gold_Platinum.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRose1.cs" />
-    <Compile Include="Items\Weapons\CresentRose\CresentRose2.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee1.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee2.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRoseRanged1.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRoseRanged2.cs" />
     <Compile Include="Items\Weapons\EmberCelica\EmberCelicaMelee1.cs" />
     <Compile Include="Items\Weapons\EmberCelica\EmberCelicaRanged1.cs" />
     <Compile Include="Items\Weapons\GambolShroud\GambolShroud1.cs" />
