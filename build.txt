@@ -1,0 +1,9 @@
+author = UltimAvatar
+
+version = 0.1
+
+displayName = Dust a RWBY mod
+homepage = 
+
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\* .git*
+includePDB = true

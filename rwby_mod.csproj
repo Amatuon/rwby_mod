@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6CC92067-F6AD-4B9F-B002-018DC0FAC5FE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>rwby_mod</RootNamespace>
+    <AssemblyName>rwby_mod</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.Xna.Framework" />
+    <Reference Include="Microsoft.Xna.Framework.Game" />
+    <Reference Include="Microsoft.Xna.Framework.Graphics" />
+    <Reference Include="Terraria">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Terraria\Terraria.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Items\Accessories\Aura.cs" />
+    <Compile Include="Items\Dusts\DustAir.cs" />
+    <Compile Include="Items\Dusts\DustEarth.cs" />
+    <Compile Include="Items\Dusts\DustFire.cs" />
+    <Compile Include="Items\Dusts\DustIce.cs" />
+    <Compile Include="Items\Dusts\DustLightning.cs" />
+    <Compile Include="Items\Dusts\DustSteam.cs" />
+    <Compile Include="Items\Dusts\DustWater.cs" />
+    <Compile Include="Items\Dusts\DustGravity.cs" />
+    <Compile Include="Items\Gold_Platinum.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRose1.cs" />
+    <Compile Include="Items\Weapons\CresentRose\CresentRose2.cs" />
+    <Compile Include="Items\Weapons\EmberCelica\EmberCelica1.cs" />
+    <Compile Include="Items\Weapons\GambolShroud\GambolShroud1.cs" />
+    <Compile Include="Items\Weapons\Myrtenaster\Myrtenaster1.cs" />
+    <Compile Include="NPCs\DustMerchant.cs" />
+    <Compile Include="Projectiles\EmberCelicaBlast.cs" />
+    <Compile Include="rwby_mod.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.txt" />
+    <Content Include="description.txt" />
+    <Content Include="Items\Accessories\Aura.png" />
+    <Content Include="Items\Dusts\DustAir.png" />
+    <Content Include="Items\Dusts\DustEarth.png" />
+    <Content Include="Items\Dusts\DustFire.png" />
+    <Content Include="Items\Dusts\DustGravity.png" />
+    <Content Include="Items\Dusts\DustIce.png" />
+    <Content Include="Items\Dusts\DustLightning.png" />
+    <Content Include="Items\Dusts\DustSteam.png" />
+    <Content Include="Items\Dusts\DustWater.png" />
+    <Content Include="Items\Gold_Platinum.png" />
+    <Content Include="Items\Weapons\CresentRose\CresentRose.png" />
+    <Content Include="Items\Weapons\EmberCelica\EmberCelica.png" />
+    <Content Include="Items\Weapons\GambolShroud\GambolShroud.png" />
+    <Content Include="Items\Weapons\Myrtenaster\Myrtenaster.png" />
+    <Content Include="NPCs\DustMerchant.png" />
+    <Content Include="NPCs\DustMerchant_Head.png" />
+    <Content Include="Projectiles\EmberCelicaBlast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Items\Placeables\" />
+    <Folder Include="Tiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
