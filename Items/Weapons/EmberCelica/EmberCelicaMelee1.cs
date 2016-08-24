@@ -8,25 +8,27 @@ using Terraria.ModLoader;
 
 namespace rwby_mod.Items.Weapons.EmberCelica
 {
-    public class EmberCelica1 : ModItem
+    public class EmberCelicaMelee1 : ModItem
     {
         public override void SetDefaults()
         {
             item.name = "Ember Celica";
-            item.toolTip = "Shotgun Guantlets";
+            item.toolTip = "Shotgun Gauntlets";
+            item.damage = 20;
+            item.melee = true;
             item.width = 29;
             item.height = 15;
-            item.melee = true;
-            item.damage = 20;
-            item.useTime = 12;
+            item.useTime = 15;
+            item.useAnimation = 15;
             item.useStyle = 5;
-            item.useAnimation = 12;
-            item.useSound = 10;
-            item.useTurn = true;
+            item.knockBack = 5;
+            item.value = 10000;
+            item.rare = 2;
+            item.useSound = 1;
             item.autoReuse = true;
-            item.knockBack = 3;
-            item.value = 1;
-            item.rare = 1;
+            item.useTurn = true;
+            item.shoot = mod.ProjectileType("EmberCelicaBlast");
+            item.shootSpeed = 1f;
         }
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
@@ -56,19 +58,17 @@ namespace rwby_mod.Items.Weapons.EmberCelica
         {
             if (player.altFunctionUse == 2)      //Binds to Right Click
             {
-                item.melee = false;
-                item.ranged = true;
-                item.toolTip = "rightclicked";
-              //item.shoot = ItemID.RocketI;
+                item.stack -= 1;
+
+                if (item.stack == 0)
+                    item.type = 0;
+
+                player.QuickSpawnItem(mod.ItemType("EmberCelicaRanged1"));
             }
 
             else
             {
-                item.melee = true;
-                item.ranged = false;
-                item.toolTip = "Left clickes";
-                item.shoot = mod.ProjectileType("EmberCelicaBlast");
-                item.shootSpeed = 1f;
+
             }
 
             return base.CanUseItem(player);
@@ -82,7 +82,7 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             position += Vector2.Normalize(new Vector2(speedX, speedY)) * 45f;
             for (int i = 0; i < numberProjectiles; i++)
             {
-                Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f; // Watch out for dividing by 0 if there is only 1 projectile.
+                Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f;
                 Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
             }
             return true;

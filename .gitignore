@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+.vs/rwby_mod/v14/.suo
+bin/*
+obj/*
