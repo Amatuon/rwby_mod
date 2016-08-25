@@ -40,7 +40,7 @@ namespace rwby_mod.Items.Weapons.CresentRose
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
         {
-            texture = "rwby_mod/Items/Weapons/CresentRose/CresentRose";
+            texture = "rwby_mod/Items/Weapons/CresentRose/CresentRoseMelee";
             return true;
         }
 

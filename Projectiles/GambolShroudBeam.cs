@@ -3,18 +3,18 @@ using Terraria.ModLoader;
 
 namespace rwby_mod.Projectiles
 {
-    public class EmberCelicaBlast : ModProjectile
+    public class GambolShroudBeam : ModProjectile
     {
         public override void SetDefaults()
         {
-            projectile.name = "Ember Celica Blast";
-            projectile.width = 65;
-            projectile.height = 20;
+            projectile.name = "Gambol Shroud Beam";
+            projectile.width = 32;
+            projectile.height = 18;
             projectile.friendly = true;
             projectile.melee = true;
             projectile.tileCollide = true;
             projectile.penetrate = 5;
-            projectile.timeLeft = 200;
+            projectile.timeLeft = 300;
             projectile.light = 5f;
             projectile.extraUpdates = 1;
             projectile.ignoreWater = true;

@@ -64,10 +64,14 @@
     <Compile Include="Items\Weapons\CresentRose\CresentRoseRanged2.cs" />
     <Compile Include="Items\Weapons\EmberCelica\EmberCelicaMelee1.cs" />
     <Compile Include="Items\Weapons\EmberCelica\EmberCelicaRanged1.cs" />
-    <Compile Include="Items\Weapons\GambolShroud\GambolShroud1.cs" />
+    <Compile Include="Items\Weapons\GambolShroud\GambolShroudMelee1.cs" />
+    <Compile Include="Items\Weapons\GambolShroud\GambolShroudRanged1.cs" />
+    <Compile Include="Items\Weapons\GambolShroud\GambolShroudThrown1.cs" />
     <Compile Include="Items\Weapons\Myrtenaster\Myrtenaster1.cs" />
     <Compile Include="NPCs\DustMerchant.cs" />
     <Compile Include="Projectiles\EmberCelicaBlast.cs" />
+    <Compile Include="Projectiles\GambolShroudBeam.cs" />
+    <Compile Include="Projectiles\GambolShroudFlail.cs" />
     <Compile Include="rwby_mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -84,13 +88,17 @@
     <Content Include="Items\Dusts\DustSteam.png" />
     <Content Include="Items\Dusts\DustWater.png" />
     <Content Include="Items\Gold_Platinum.png" />
-    <Content Include="Items\Weapons\CresentRose\CresentRose.png" />
+    <Content Include="Items\Weapons\CresentRose\CresentRoseMelee.png" />
+    <Content Include="Items\Weapons\CresentRose\CresentRoseRanged.png" />
     <Content Include="Items\Weapons\EmberCelica\EmberCelica.png" />
-    <Content Include="Items\Weapons\GambolShroud\GambolShroud.png" />
+    <Content Include="Items\Weapons\GambolShroud\GambolShroudMelee.png" />
     <Content Include="Items\Weapons\Myrtenaster\Myrtenaster.png" />
     <Content Include="NPCs\DustMerchant.png" />
     <Content Include="NPCs\DustMerchant_Head.png" />
     <Content Include="Projectiles\EmberCelicaBlast.png" />
+    <Content Include="Projectiles\GambolShroudBeam.png" />
+    <Content Include="Projectiles\GambolShroudFlail.png" />
+    <Content Include="Projectiles\GambolShroud_Chain.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Items\Placeables\" />

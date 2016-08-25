@@ -1,7 +1,6 @@
 ﻿using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using rwby_mod;
 
 namespace rwby_mod
 {

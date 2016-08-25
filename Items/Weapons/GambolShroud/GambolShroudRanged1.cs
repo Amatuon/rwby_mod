@@ -1,20 +1,22 @@
 ﻿using System.Collections.Generic;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace rwby_mod.Items.Weapons.CresentRose
+namespace rwby_mod.Items.Weapons.GambolShroud
 {
-    public class CresentRoseMelee2 : ModItem
+    public class GambolShroudRanged1 : ModItem
     {
         public override void SetDefaults()
         {
-            item.name = "Cresent Rose";
-            item.damage = 40;
-            item.melee = true;
-            item.width = 60;
-            item.height = 56;
-            item.toolTip = "Its also a gun";
+            item.name = "Gambol Shroud";
+            item.damage = 15;
+            item.ranged = true;
+            item.noMelee = true;
+            item.width = 48;
+            item.height = 10;
+            item.toolTip = "Look its a Blade, its Gun, its a . . . Boomerang?";
             item.useTime = 15;
             item.useAnimation = 15;
             item.useStyle = 1;
@@ -24,24 +26,14 @@ namespace rwby_mod.Items.Weapons.CresentRose
             item.useSound = 1;
             item.autoReuse = true;
             item.useTurn = true;
-        }
-
-        public override void AddRecipes()
-        {
-            ModRecipe recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Bone, 10);
-            recipe.AddIngredient(ItemID.GoldenKey, 1);
-            recipe.AddIngredient(ItemID.HellstoneBar, 10);
-            recipe.AddRecipeGroup("rwby_mod:CresentRose1", 1);
-            recipe.AddTile(TileID.Hellforge);
-            recipe.AddTile(TileID.Anvils);
-            recipe.SetResult(this);
-            recipe.AddRecipe();
+            item.shoot = 10;
+            item.shootSpeed = 16f;
+            item.useAmmo = ProjectileID.Bullet;
         }
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
         {
-            texture = "rwby_mod/Items/Weapons/CresentRose/CresentRoseMelee";
+            texture = "rwby_mod/Items/Weapons/GambolShroud/GambolShroudMelee";
             return true;
         }
 
@@ -59,7 +51,7 @@ namespace rwby_mod.Items.Weapons.CresentRose
                 if (item.stack == 0)
                     item.type = 0;
 
-                player.QuickSpawnItem(mod.ItemType("CresentRoseRanged2"));
+                player.QuickSpawnItem(mod.ItemType("GambolShroudThrown1"));
             }
 
             else

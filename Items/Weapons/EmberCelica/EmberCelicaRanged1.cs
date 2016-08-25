@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+﻿using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -29,6 +26,7 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             item.useTurn = true;
             item.shoot = ProjectileID.RocketI;
             item.shootSpeed = 15f;
+            item.useAmmo = ItemID.RocketI;
         }
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)

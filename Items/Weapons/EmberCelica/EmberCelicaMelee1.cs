@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -27,6 +25,8 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             item.useSound = 1;
             item.autoReuse = true;
             item.useTurn = true;
+            item.shoot = mod.ProjectileType("EmberCelicaBlast");
+            item.shootSpeed = 1f;
         }
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)

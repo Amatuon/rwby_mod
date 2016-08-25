@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -18,8 +14,8 @@ namespace rwby_mod.Items.Weapons.CresentRose
             item.damage = 15;
             item.ranged = true;
             item.noMelee = true;
-            item.width = 60;
-            item.height = 56;
+            item.width = 75;
+            item.height = 50;
             item.toolTip = "Its also a Scythe";
             item.useTime = 25;
             item.useAnimation = 25;
@@ -37,7 +33,7 @@ namespace rwby_mod.Items.Weapons.CresentRose
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
         {
-            texture = "rwby_mod/Items/Weapons/CresentRose/CresentRose";
+            texture = "rwby_mod/Items/Weapons/CresentRose/CresentRoseRanged";
             return true;
         }
 
