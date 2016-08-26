@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -14,12 +13,12 @@ namespace rwby_mod.Items.Weapons.GambolShroud
             item.damage = 15;
             item.ranged = true;
             item.noMelee = true;
-            item.width = 48;
-            item.height = 10;
+            item.width = 41;
+            item.height = 23;
             item.toolTip = "Look its a Blade, its Gun, its a . . . Boomerang?";
             item.useTime = 15;
             item.useAnimation = 15;
-            item.useStyle = 1;
+            item.useStyle = 5;
             item.knockBack = 5;
             item.value = 10000;
             item.rare = 2;
@@ -33,7 +32,7 @@ namespace rwby_mod.Items.Weapons.GambolShroud
 
         public override bool Autoload(ref string name, ref string texture, IList<EquipType> equips)
         {
-            texture = "rwby_mod/Items/Weapons/GambolShroud/GambolShroudMelee";
+            texture = "rwby_mod/Items/Weapons/GambolShroud/GambolShroudRanged";
             return true;
         }
 

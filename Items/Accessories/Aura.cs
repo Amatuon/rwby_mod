@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace rwby_mod.Items.Accessories
@@ -24,25 +25,32 @@ namespace rwby_mod.Items.Accessories
 			recipe.AddRecipe();
 		}
 
-        public bool canRegen = false;
-
 		public override void UpdateAccessory(Player player, bool hideVisual)
 		{
             const int manaLoss = 4;
-            
+            Huntsman_Player modPlayer = Main.player[Main.myPlayer].GetModPlayer<Huntsman_Player>(mod);
+
+            //Handles Aura
             if (player.statMana >= (player.statManaMax / 4))
             {
-                canRegen = true;
+                modPlayer.canRegen = true;
             }
             if (player.statMana == 0)
             {
-                canRegen = false;
+                modPlayer.canRegen = false;
             }
             
-            if ((player.statLife < player.statLifeMax) && (player.statMana >= manaLoss) && (canRegen == true))
+            if ((player.statLife < player.statLifeMax) && (player.statMana >= manaLoss) && (modPlayer.canRegen == true))
             {
                 player.statMana -= manaLoss;
                 player.statLife += 1;
+            }
+
+            //Handles GlyphSpeed
+            if (modPlayer.glyphSpeedBuff == true)
+            {
+                player.AddBuff(BuffID.Swiftness, 600);
+                modPlayer.glyphSpeedBuff = false;
             }
         }
 	}

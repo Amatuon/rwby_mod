@@ -57,6 +57,7 @@
     <Compile Include="Items\Dusts\DustWater.cs" />
     <Compile Include="Items\Dusts\DustGravity.cs" />
     <Compile Include="Items\Gold_Platinum.cs" />
+    <Compile Include="Items\Placeables\GlyphSpeed.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRose1.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee1.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee2.cs" />
@@ -74,6 +75,8 @@
     <Compile Include="Projectiles\GambolShroudFlail.cs" />
     <Compile Include="rwby_mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Huntsman_Player.cs" />
+    <Compile Include="Tiles\GlyphSpeedTile.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="build.txt" />
@@ -88,10 +91,13 @@
     <Content Include="Items\Dusts\DustSteam.png" />
     <Content Include="Items\Dusts\DustWater.png" />
     <Content Include="Items\Gold_Platinum.png" />
+    <Content Include="Items\Placeables\GlyphSpeed.png" />
     <Content Include="Items\Weapons\CresentRose\CresentRoseMelee.png" />
     <Content Include="Items\Weapons\CresentRose\CresentRoseRanged.png" />
     <Content Include="Items\Weapons\EmberCelica\EmberCelica.png" />
     <Content Include="Items\Weapons\GambolShroud\GambolShroudMelee.png" />
+    <Content Include="Items\Weapons\GambolShroud\GambolShroudRanged.png" />
+    <Content Include="Items\Weapons\GambolShroud\GambolShroudThrown.png" />
     <Content Include="Items\Weapons\Myrtenaster\Myrtenaster.png" />
     <Content Include="NPCs\DustMerchant.png" />
     <Content Include="NPCs\DustMerchant_Head.png" />
@@ -99,11 +105,9 @@
     <Content Include="Projectiles\GambolShroudBeam.png" />
     <Content Include="Projectiles\GambolShroudFlail.png" />
     <Content Include="Projectiles\GambolShroud_Chain.png" />
+    <Content Include="Tiles\GlyphSpeedTile.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Items\Placeables\" />
-    <Folder Include="Tiles\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>

@@ -26,7 +26,6 @@ namespace rwby_mod.Items.Weapons.Myrtenaster
             item.useSound = 1;
             item.autoReuse = true;
             item.useTurn = true;
-            item.useAmmo = ProjectileID.Bullet;
         }
 
         public override void AddRecipes()

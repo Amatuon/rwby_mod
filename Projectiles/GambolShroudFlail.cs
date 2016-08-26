@@ -2,7 +2,6 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace rwby_mod.Projectiles
@@ -14,8 +13,8 @@ namespace rwby_mod.Projectiles
         public override void SetDefaults()
         {
             projectile.name = "Gambol Shroud";
-            projectile.width = 32;
-            projectile.height = 32;
+            projectile.width = 41;
+            projectile.height = 23;
             projectile.friendly = true;
             projectile.penetrate = -1;
             projectile.thrown = true;
@@ -24,7 +23,7 @@ namespace rwby_mod.Projectiles
 
         public override bool PreDraw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch, Color lightColor)
         {
-            Texture2D texture = ModLoader.GetTexture("rwby_mod/Projectiles/GambolShroudFlail_Chain");
+            Texture2D texture = ModLoader.GetTexture("rwby_mod/Projectiles/GambolShroud_Chain");
 
             Vector2 position = projectile.Center;
             Vector2 mountedCenter = Main.player[projectile.owner].MountedCenter;
@@ -52,7 +51,7 @@ namespace rwby_mod.Projectiles
                     vector2_4 = mountedCenter - position;
                     Microsoft.Xna.Framework.Color color2 = Lighting.GetColor((int)position.X / 16, (int)((double)position.Y / 16.0));
                     color2 = projectile.GetAlpha(color2);
-                    Main.spriteBatch.Draw(texture, position - Main.screenPosition, sourceRectangle, color2, rotation, origin, 1.35f, SpriteEffects.None, 0.0f);
+                    Main.spriteBatch.Draw(texture, position - Main.screenPosition, sourceRectangle, color2, rotation, origin, 1f, SpriteEffects.None, 0.0f);
                 }
             }
 
