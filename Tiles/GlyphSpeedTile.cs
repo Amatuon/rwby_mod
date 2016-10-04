@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -32,10 +26,10 @@ namespace rwby_mod.Tiles
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            Huntsman_Player modPlayer = Main.player[Main.myPlayer].GetModPlayer<Huntsman_Player>(mod);
-            if (Main.tile[i, j].frameY >= 0)
+            Player player = Main.player[Main.myPlayer];
+            if ( (player.position.X / 16 <= i + 5) && (player.position.X / 16 >= i - 5) && (player.position.Y / 16  <= j + 5) && (player.position.Y / 16 >= j - 5))
             {
-                modPlayer.glyphSpeedBuff = true;
+                player.AddBuff(BuffID.Swiftness, 10);
             }
         }
     }

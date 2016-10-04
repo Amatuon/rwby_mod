@@ -13,11 +13,5 @@ namespace rwby_mod
     public class Huntsman_Player : ModPlayer
     {
         public bool canRegen = false;
-        public bool glyphSpeedBuff = false;
-
-        public override void PreUpdateBuffs()
-        {
-            //player.AddBuff(BuffID.Swiftness, 600);
-        }
     }
 }

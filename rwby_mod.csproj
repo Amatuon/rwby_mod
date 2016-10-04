@@ -19,7 +19,7 @@
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
+    <WarningLevel>2</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buffs\Aura.cs" />
     <Compile Include="Items\Accessories\Aura.cs" />
     <Compile Include="Items\Dusts\DustAir.cs" />
     <Compile Include="Items\Dusts\DustEarth.cs" />
@@ -79,6 +80,7 @@
     <Compile Include="Tiles\GlyphSpeedTile.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Buffs\Aura.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
     <Content Include="Items\Accessories\Aura.png" />
