@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ID;
@@ -8,6 +9,10 @@ namespace rwby_mod.Items.Weapons.EmberCelica
 {
     public class EmberCelicaMelee1 : ModItem
     {
+        public static byte reforge = (byte)0;
+        public static byte reforgeTemp = (byte)0;
+        public static bool reforgeLogic = false;
+
         public override void SetDefaults()
         {
             item.name = "Ember Celica";
@@ -47,6 +52,15 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             recipe.AddRecipe();
         }
 
+        public override void PostReforge()
+        {
+            if (EmberCelicaMelee1.reforgeLogic == true)
+            {
+                item.prefix = EmberCelicaMelee1.reforge;
+                EmberCelicaMelee1.reforgeLogic = false;
+            }
+        }
+        
         public override bool AltFunctionUse(Player player)
         {
             return true;
@@ -56,6 +70,9 @@ namespace rwby_mod.Items.Weapons.EmberCelica
         {
             if (player.altFunctionUse == 2)
             {
+                EmberCelicaMelee1.reforge = item.prefix;
+                EmberCelicaMelee1.reforgeLogic = true;
+
                 item.stack -= 1;
 
                 if (item.stack == 0)
@@ -83,7 +100,7 @@ namespace rwby_mod.Items.Weapons.EmberCelica
                 Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedBy(MathHelper.Lerp(-rotation, rotation, i / (numberProjectiles - 1))) * .2f;
                 Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
             }
-            return true;
+            return false;
         }
     }
 }

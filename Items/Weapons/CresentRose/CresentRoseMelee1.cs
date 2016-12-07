@@ -20,12 +20,12 @@ namespace rwby_mod.Items.Weapons.CresentRose
             item.useStyle = 1;
 			item.knockBack = 5;
 			item.value = 10000;
-			item.rare = 2;
+			item.rare = 0;
 			item.useSound = 1;
 			item.autoReuse = true;
 			item.useTurn = true;
         }
-		
+	
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
@@ -67,7 +67,6 @@ namespace rwby_mod.Items.Weapons.CresentRose
             }
 
             return base.CanUseItem(player);
-            
         }
-	}
+    }
 }

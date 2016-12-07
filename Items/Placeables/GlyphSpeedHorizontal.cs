@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 
 namespace rwby_mod.Items.Placeables
 {
-    public class GlyphSpeed : ModItem
+    public class GlyphSpeedHorizontal : ModItem
     {
         public override void SetDefaults()
         {
@@ -11,7 +11,7 @@ namespace rwby_mod.Items.Placeables
             item.toolTip = "Speed Boost!";
             item.value = Item.sellPrice(0, 1, 0, 0);
             item.consumable = true;
-            item.createTile = mod.TileType("GlyphSpeedTile");
+            item.createTile = mod.TileType("GlyphSpeedTileHorizontal");
             item.maxStack = 999;
             item.rare = 2;
             item.autoReuse = true;

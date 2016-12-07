@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Buffs\Aura.cs" />
-    <Compile Include="Items\Accessories\Aura.cs" />
+    <Compile Include="Items\Tools\AuraInhibitor.cs" />
     <Compile Include="Items\Dusts\DustAir.cs" />
     <Compile Include="Items\Dusts\DustEarth.cs" />
     <Compile Include="Items\Dusts\DustFire.cs" />
@@ -57,9 +57,9 @@
     <Compile Include="Items\Dusts\DustSteam.cs" />
     <Compile Include="Items\Dusts\DustWater.cs" />
     <Compile Include="Items\Dusts\DustGravity.cs" />
-    <Compile Include="Items\Gold_Platinum.cs" />
-    <Compile Include="Items\Placeables\GlyphSpeed.cs" />
-    <Compile Include="Items\Weapons\CresentRose\CresentRose1.cs" />
+    <Compile Include="Items\Placeables\GlyphSpeedHorizontal.cs" />
+    <Compile Include="Items\Placeables\GlyphSpeedVertical.cs" />
+    <Compile Include="Items\Tools\GlyphInhibitor.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee1.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRoseMelee2.cs" />
     <Compile Include="Items\Weapons\CresentRose\CresentRoseRanged1.cs" />
@@ -77,13 +77,14 @@
     <Compile Include="rwby_mod.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Huntsman_Player.cs" />
-    <Compile Include="Tiles\GlyphSpeedTile.cs" />
+    <Compile Include="Tiles\GlyphSpeedTileHorizontal.cs" />
+    <Compile Include="Tiles\GlyphSpeedTileVertical.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Buffs\Aura.png" />
     <Content Include="build.txt" />
     <Content Include="description.txt" />
-    <Content Include="Items\Accessories\Aura.png" />
+    <Content Include="Items\Tools\AuraInhibitor.png" />
     <Content Include="Items\Dusts\DustAir.png" />
     <Content Include="Items\Dusts\DustEarth.png" />
     <Content Include="Items\Dusts\DustFire.png" />
@@ -92,8 +93,9 @@
     <Content Include="Items\Dusts\DustLightning.png" />
     <Content Include="Items\Dusts\DustSteam.png" />
     <Content Include="Items\Dusts\DustWater.png" />
-    <Content Include="Items\Gold_Platinum.png" />
-    <Content Include="Items\Placeables\GlyphSpeed.png" />
+    <Content Include="Items\Placeables\GlyphSpeedHorizontal.png" />
+    <Content Include="Items\Placeables\GlyphSpeedVertical.png" />
+    <Content Include="Items\Tools\GlyphInhibitor.png" />
     <Content Include="Items\Weapons\CresentRose\CresentRoseMelee.png" />
     <Content Include="Items\Weapons\CresentRose\CresentRoseRanged.png" />
     <Content Include="Items\Weapons\EmberCelica\EmberCelica.png" />
@@ -107,9 +109,12 @@
     <Content Include="Projectiles\GambolShroudBeam.png" />
     <Content Include="Projectiles\GambolShroudFlail.png" />
     <Content Include="Projectiles\GambolShroud_Chain.png" />
-    <Content Include="Tiles\GlyphSpeedTile.png" />
+    <Content Include="Tiles\GlyphSpeedTileHorizontal.png" />
+    <Content Include="Tiles\GlyphSpeedTileVertical.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Items\Accessories\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"C:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "$(ProjectDir)\" -eac "$(TargetPath)"</PostBuildEvent>

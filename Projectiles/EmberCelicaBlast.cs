@@ -12,10 +12,10 @@ namespace rwby_mod.Projectiles
             projectile.height = 20;
             projectile.friendly = true;
             projectile.melee = true;
-            projectile.tileCollide = true;
+            projectile.tileCollide = false;
             projectile.penetrate = 5;
-            projectile.timeLeft = 200;
-            projectile.light = 5f;
+            projectile.timeLeft = 60;
+            projectile.light = 2.5f;
             projectile.extraUpdates = 1;
             projectile.ignoreWater = true;
         }

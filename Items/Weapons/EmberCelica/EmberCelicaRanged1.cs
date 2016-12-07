@@ -35,6 +35,15 @@ namespace rwby_mod.Items.Weapons.EmberCelica
             return true;
         }
 
+        public override void PostReforge()
+        {
+            if (EmberCelicaMelee1.reforgeLogic == true)
+            {
+                item.prefix = EmberCelicaMelee1.reforge;
+                EmberCelicaMelee1.reforgeLogic = false;
+            }
+        }
+
         public override bool AltFunctionUse(Player player)
         {
             return true;
@@ -44,6 +53,9 @@ namespace rwby_mod.Items.Weapons.EmberCelica
         {
             if (player.altFunctionUse == 2)
             {
+                EmberCelicaMelee1.reforge = item.prefix;
+                EmberCelicaMelee1.reforgeLogic = true;
+
                 item.stack -= 1;
 
                 if (item.stack == 0)

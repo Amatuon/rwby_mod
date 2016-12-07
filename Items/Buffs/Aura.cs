@@ -23,7 +23,6 @@ namespace rwby_mod.Buffs
             const int manaLoss = 4;
             Huntsman_Player modPlayer = Main.player[Main.myPlayer].GetModPlayer<Huntsman_Player>(mod);
 
-            //Handles Aura
             if (player.statMana >= (player.statManaMax / 4))
             {
                 modPlayer.canRegen = true;

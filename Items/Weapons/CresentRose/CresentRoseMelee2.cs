@@ -31,7 +31,10 @@ namespace rwby_mod.Items.Weapons.CresentRose
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ItemID.Bone, 10);
             recipe.AddIngredient(ItemID.GoldenKey, 1);
-            recipe.AddIngredient(ItemID.HellstoneBar, 10);
+            recipe.AddIngredient(ItemID.HellstoneBar, 15);
+            recipe.AddIngredient(ItemID.JungleSpores, 10);
+            recipe.AddIngredient(ItemID.Stinger, 10);
+            recipe.AddRecipeGroup("rwby_mod:BadMetal", 10);
             recipe.AddRecipeGroup("rwby_mod:CresentRose1", 1);
             recipe.AddTile(TileID.Hellforge);
             recipe.AddTile(TileID.Anvils);
