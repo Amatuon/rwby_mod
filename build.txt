@@ -3,7 +3,7 @@ author = UltimAvatar
 version = 0.1
 
 displayName = Dust a RWBY mod
-homepage = 
+homepage = https://github.com/Amatuon/rwby_mod/wiki
 
 buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\* .git*
-includePDB = true
+includePDB = false

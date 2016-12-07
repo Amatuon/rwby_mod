@@ -1,6 +1,20 @@
 Dust a RWBY Mod [WIP]
 
 Explore Terraria with weapons from team RWBY!
-Weapons from team RWBY Complete.
-Next will be team JNPR.
-Would eventually like to include Grimm.
+
+
+Adds the signiture weapon for each of the members of team RWBY. Right click a weapon to change its mode.
+Weapons from team RWBY partially complete. Weapons function as intended but switching between weapon modes is not fully supported yet.
+
++ 1 new NPC
++ 4 new Weapons
++ 1 new Buff
++ 1 new Tile
+
+
+Future Works:
+
+Finish the weapon mode switch.
+Add stages to weapons so they are relevent through all stages of gameplay.
+Make weapons from team JNPR.
+Eventually like to include Grimm.
